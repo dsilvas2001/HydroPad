@@ -1,0 +1,578 @@
+/*-----------------------------------*\
+ * #REUSED STYLE
+\*-----------------------------------*/
+
+.container {
+  padding-inline: 10px;
+}
+
+.h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.h2,
+.h3,
+.h4 {
+  color: hsl(0, 5%, 7%);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: calc(1.813rem + 1vw);
+}
+
+.h3 {
+  font-size: calc(1.313rem + 1vw);
+}
+
+.h4 {
+  font-size: 1rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn {
+  max-width: max-content;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 25px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.25s ease-in-out;
+}
+
+.btn-primary {
+  border-color: hsl(0, 0%, 100%);
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-secondary {
+  background: hsl(24, 74%, 58%);
+  border-color: hsl(24, 74%, 58%);
+  color: hsl(0, 0%, 0%);
+}
+
+.btn-secondary:is(:hover, :focus) {
+  --raw-seinna: hsl(24, 74%, 64%);
+}
+
+.section-subtitle {
+  position: relative;
+  color: hsl(0, 0%, 62%);
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.section-subtitle::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: hsl(0, 0%, 62%);
+}
+
+.section-title {
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  color: hsl(0, 0%, 62%);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  background: hsl(24, 74%, 58%);
+  min-width: max-content;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  box-shadow: 10px 10px 40px hsla(0, 0%, 0%, 0.1);
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease-in-out;
+  z-index: 1;
+}
+
+/*-----------------------------------*\
+ * #CONTACT
+\*-----------------------------------*/
+
+.contact {
+  padding-block: 80px;
+}
+
+.contact-content {
+  margin-bottom: 50px;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item-icon {
+  font-size: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.contact-item-icon ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.contact-item-title {
+  margin-bottom: 10px;
+}
+
+.contact-list-item .contact-info {
+  color: hsl(0, 0%, 37%);
+  font-style: normal;
+  line-height: 1.6;
+  transition: 0.25s ease-in-out;
+}
+
+.contact-info:not(address):is(:hover, :focus) {
+  color: hsl(0, 0%, 100%);
+}
+
+.contac-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-inline: 40px;
+}
+
+.contact-social-link {
+  position: relative;
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 12%);
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+
+.contact-social-link:is(:hover, :focus) {
+  background: hsl(24, 74%, 58%);
+  color: #fff;
+}
+
+.contact-social-link:is(:hover, :focus) .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.contact-form {
+  background: hsl(0, 0%, 19%);
+  padding: 20px;
+
+  border-radius: 12px;
+  box-shadow: 10px 10px 40px hsla(0, 0%, 0%, 0.4);
+}
+
+.form-wrapper {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+.input-field-Form {
+  background: hsl(0, 0%, 93%);
+  color: hsl(24, 74%, 58%);
+  padding: 12px; /* Ajusta el valor del padding según tus preferencias */
+  padding-left: 40px; /* Ajusta el valor del padding izquierdo según tus preferencias */
+  border-radius: 12px;
+  transition: 0.25s ease-in-out;
+  width: 25rem;
+}
+
+.input-wrapper,
+.fa-user,
+.fa-envelope.interfazcobtact,
+.fa-phone,
+.fa-message {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: hsl(0, 0%, 37%);
+  font-size: 20px;
+  transition: 0.25s ease-in-out;
+}
+
+textarea.input-field-Form {
+  min-height: 60px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.input-field-Form:focus {
+  outline: 1px solid;
+}
+
+.input-field-Form:focus + ion-icon {
+  color: hsl(24, 74%, 58%);
+}
+
+.contact .btn-primary {
+  max-width: unset;
+  width: 100%;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 12%);
+}
+
+/*-----------------------------------*\
+   * #CONTACT
+  \*-----------------------------------*/
+
+.contact {
+  padding-block: 80px;
+}
+
+.contact-content {
+  margin-bottom: 50px;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-item-icon {
+  font-size: 25px;
+  color: hsl(0, 0%, 100%);
+}
+
+.contact-item-icon ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.contact-item-title {
+  margin-bottom: 10px;
+}
+
+.contact-list-item .contact-info {
+  color: hsl(0, 0%, 62%);
+  font-style: normal;
+  line-height: 1.6;
+  transition: 0.25s ease-in-out;
+}
+
+.contact-info:not(address):is(:hover, :focus) {
+  color: hsl(0, 0%, 100%);
+}
+
+.contac-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding-inline: 40px;
+}
+
+.contact-social-link {
+  position: relative;
+  background: hsl(0, 0%, 6%);
+  color: hsl(0, 0%, 12%);
+  width: 35px;
+  height: 35px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+
+.contact-social-link:is(:hover, :focus) {
+  background: hsl(24, 74%, 58%);
+  color: #fff;
+}
+
+.contact-social-link:is(:hover, :focus) .tooltip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.contact-form {
+  background: hsl(0, 0%, 19%);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 10px 10px 40px hsla(0, 0%, 0%, 0.4);
+}
+
+.form-wrapper {
+  margin-bottom: 25px;
+}
+
+.form-label {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 8px;
+  margin-left: 5px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-field-Form {
+  background: hsl(0, 0%, 93%);
+  color: hsl(24, 74%, 58%);
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 12px;
+  transition: 0.25s ease-in-out;
+}
+
+.input-wrapper ion-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: hsl(0, 0%, 37%);
+  font-size: 20px;
+  transition: 0.25s ease-in-out;
+}
+
+textarea.input-field-Form {
+  min-height: 60px;
+  height: 120px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+.input-field-Form:focus {
+  outline: 1px solid;
+}
+
+.input-field-Form:focus + ion-icon {
+  color: hsl(24, 74%, 58%);
+}
+
+.contact .btn-primary {
+  max-width: unset;
+  width: 100%;
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 12%);
+}
+
+/*-----------------------------------*\
+   * #MEDIA QUERIES
+  \*-----------------------------------*/
+
+/**
+   * responsive for larger than 550px screen
+   */
+
+@media (min-width: 550px) {
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 550px;
+    margin-inline: auto;
+  }
+
+  .section-title {
+    max-width: 380px;
+  }
+}
+
+/**
+   * responsive for larger than 768px screen
+   */
+
+@media (min-width: 768px) {
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 720px;
+  }
+
+  .section-title {
+    max-width: 430px;
+  }
+
+  /**
+     * CONTACT
+     */
+
+  .contact-form {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+}
+
+/**
+   * responsive for larger than 992px screen
+   */
+
+@media (min-width: 992px) {
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 980px;
+  }
+
+  .section-content {
+    position: relative;
+    padding-left: 90px;
+  }
+
+  .section-subtitle {
+    position: absolute;
+    top: 0;
+    left: 60px; /* Ajusta el valor del margen izquierdo según tus necesidades */
+    transform: rotate(0.75turn) translateX(-100%);
+    transform-origin: left top;
+    margin-bottom: 0;
+  }
+
+  .section-subtitle::after {
+    top: 8px;
+    left: auto;
+    right: calc(100% + 20px);
+  }
+
+  /**
+     * SKILLS
+     */
+
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .skills-content {
+    margin-bottom: 0;
+  }
+
+  .skills-toggle {
+    margin-inline: 0;
+  }
+}
+
+/* ESTO COLOCA CORRECTAMENTE EL FORM  */
+/**
+     * CONTACT
+     */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-content {
+  margin-bottom: 0;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-list {
+  margin-left: -40px;
+}
+
+/**
+   * responsive for larger than 1200px screen
+   */
+
+@media (min-width: 1200px) {
+  /**
+     * REUSED STYLE
+     */
+
+  .container {
+    max-width: 1150px;
+  }
+
+  .section-title {
+    max-width: 460px;
+  }
+}
+
+/* 
+recien agregado */
+
+/* Añade estas reglas de CSS al final de tu archivo CSS existente */
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-field-Form {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .input-wrapper ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+/* Estilos para dispositivos más grandes */
+@media (min-width: 768px) {
+  .input-wrapper {
+    position: relative;
+  }
+
+  .input-field-Form-Form {
+    width: unset;
+    padding-left: 40px;
+  }
+}

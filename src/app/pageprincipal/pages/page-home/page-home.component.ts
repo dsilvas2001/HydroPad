@@ -5,7 +5,7 @@ import { Component, AfterViewInit, Renderer2,NgModule ,CUSTOM_ELEMENTS_SCHEMA} f
 @Component({
   selector: 'app-page-home',
   templateUrl: './page-home.component.html',
-  styleUrls: ['./page-home.component.css']})
+  styleUrls: ['./page-home.component.css','./CSS/Contact.css','./CSS/Icono.css','./CSS/CardCreadores.css','./CSS/Services.css','./CSS/header.css']})
 
 
 

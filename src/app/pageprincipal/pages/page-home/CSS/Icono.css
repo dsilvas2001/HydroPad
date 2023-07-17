@@ -1,0 +1,14 @@
+.fa-solid,
+.fa-regular,
+.fa-light,
+.fa-duotone,
+.fa-brands {
+  color: black;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-linkedin {
+  color: rgb(248, 248, 248);
+}
+
+/* https://github.com/codingstella/jack-portfolio/blob/main/index.html */
