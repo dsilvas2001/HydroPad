@@ -64,6 +64,15 @@ img {
   gap: 1.5rem;
 }
 
+/* .l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fbfefd;
+} */
+
 .l-header {
   width: 100%;
   position: fixed;
@@ -71,6 +80,7 @@ img {
   left: 0;
   z-index: 100;
   background-color: #fbfefd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra a tu menú */
 }
 
 .nav {

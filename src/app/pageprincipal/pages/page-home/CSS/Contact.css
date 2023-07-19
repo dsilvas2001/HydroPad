@@ -168,7 +168,7 @@
 
 .contact-social-link {
   position: relative;
-  background: hsl(0, 0%, 0%);
+  background: #000000;
   color: hsl(0, 0%, 12%);
   width: 35px;
   height: 35px;
@@ -294,7 +294,9 @@ textarea.input-field-Form {
   line-height: 1.6;
   transition: 0.25s ease-in-out;
 }
-
+.informacioncontact {
+  color: hsl(0, 0%, 62%);
+}
 .contact-info:not(address):is(:hover, :focus) {
   color: hsl(0, 0%, 100%);
 }
@@ -331,10 +333,10 @@ textarea.input-field-Form {
 }
 
 .contact-form {
-  background: hsl(0, 0%, 19%);
+  background: #3f37c9;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 10px 10px 40px hsla(0, 0%, 0%, 0.4);
+  box-shadow: 10px 10px 40px #00000066;
 }
 
 .form-wrapper {

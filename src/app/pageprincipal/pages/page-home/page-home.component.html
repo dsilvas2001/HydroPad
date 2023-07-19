@@ -1,7 +1,7 @@
 <header class="hero l-header">
   <nav class="nav container">
     <figure class="nav__figure">
-      <!-- <img src="../../../../assets/img/icono.png" class="nav__logo" /> -->
+      <img src="../../../../assets/img/LogoHydroPad.png" class="nav__logo" />
     </figure>
 
     <div class="nav__hamburguer">
@@ -39,6 +39,11 @@
     </div>
   </nav>
 </header>
+
+<!-- boton que desliza para arriba -->
+<span class="arriba bx bxs-up-arrow" id="arribaSpan"></span>
+
+<!-- Fin del boton que desliza para arriba -->
 
 <main class="l-main">
   <!-- <section class="home" id="home">
@@ -87,63 +92,53 @@
     </div>
   </section>
 
-  <section class="menu section tk-container" id="menu">
-    <span class="section-subtitlePortafolio">Especial</span>
-    <h2 class="section-title">Menu de la semana</h2>
-    <div class="menu_container tk-grid">
-      <div class="menu_content">
-        <img src="img/plate1.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
+  <!-- Hallazgo -->
+  <section class="hallazgoAgua">
+    <div class="encabezadoHallazgo">
+      <h2 class="h3 section-titless" style="text-align: center; font-size: 3em">
+        Hallazgos <span class="ResaltadorAzul"> Clave </span>
+      </h2>
+      <br />
+      <br />
+
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </div>
+    <div class="row1-container">
+      <div class="box box-down cyan">
+        <h2 class="subtitulohallazgo">Ahorro de Agua</h2>
+        <br />
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="../../../../assets/img/aguacontaminada.png" alt="" />
       </div>
-      <div class="menu_content">
-        <img src="img/plate2.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
+
+      <div class="box red">
+        <h2>Agua Contaminada</h2>
+        <br />
+        <p>
+          Scans our talent network to create the optimal team for your project
+        </p>
+        <img src="../../../../assets/img/aguacontaminada.png" alt="" />
       </div>
-      <div class="menu_content">
-        <img src="img/plate3.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
+
+      <div class="box box-down blue">
+        <h2>Desperdicio de agua</h2>
+        <br />
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img
+          src="https://assets.codepen.io/2301174/icon-calculator.svg"
+          alt=""
+        />
       </div>
-      <div class="menu_content">
-        <img src="img/plate1.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
-      </div>
-      <div class="menu_content">
-        <img src="img/plate2.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
-      </div>
-      <div class="menu_content">
-        <img src="img/plate3.png" class="menu_img" alt="" />
-        <h3 class="menu_name">Lorem ipsum</h3>
-        <span class="menu_detail">Lorem impsum</span>
-        <span class="menu_preci">$10.00</span>
-        <a href="#" class="button menu_button"
-          ><i class="bx bx-cart-alt"></i
-        ></a>
+    </div>
+    <div class="row2-container">
+      <div class="box orange">
+        <h2>Karma</h2>
+        <br />
+        <p>Regularly evaluates our talent to ensure quality</p>
+        <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
       </div>
     </div>
   </section>
@@ -151,8 +146,9 @@
   <!-- Servicios que brindamos -->
 
   <section class="services section tk-container" id="services">
-    <span class="section-subtitlePortafolio">Ofrecemos</span>
-    <h2 class="section-title">Nuestros increibles servicios</h2>
+    <h2 class="h3 section-titless" style="margin: 0 auto; text-align: center">
+      Nuestros Increibles <span class="ResaltadorAzul"> Servicios </span>
+    </h2>
     <div class="services_container tk-grid">
       <div class="card">
         <div class="card__img">
@@ -161,8 +157,9 @@
         <div class="card__descr-wrapper">
           <p class="card__title">Calidad Del Agua</p>
           <p class="card__descr">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-            blanditiis nemo fugit autem possimus, magnam consequatur sint esse.
+            Recibirás notificaciones instantáneas sobre niveles anormales de pH,
+            temperatura, nivel de cloro o la necesidad de reemplazar los
+            filtros.
           </p>
         </div>
       </div>
@@ -172,58 +169,64 @@
           <img src="../../../../assets/img/domotico.gif" alt="" />
         </div>
         <div class="card__descr-wrapper">
-          <p class="card__title">Calidad Del Agua</p>
+          <p class="card__title">Control Domótico</p>
           <p class="card__descr">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
-            blanditiis nemo fugit autem possimus, magnam consequatur sint esse.
+            Estableces el nivel deseado de agua y recibes alertas cuando esté
+            lleno,vacío o inicie el proceso de llenado, brindándote control y
+            evitando desperdicios.
           </p>
         </div>
       </div>
-      <div class="services_content">
-        <img
-          style="width: 15em; height: 15em"
-          src="../../../../assets/img/domotico.gif"
-          class="services_img"
-          alt=""
-        />
-        <h3 class="services_title">Lorem ipsum</h3>
-        <p class="services_description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </p>
+
+      <div class="card">
+        <div class="card__img">
+          <img src="../../../../assets/img/RELOGWATER.gif" alt="" />
+        </div>
+        <div class="card__descr-wrapper">
+          <p class="card__title">Personaliza tu experiencia</p>
+          <p class="card__descr">
+            Puedes programar rutinas automatizadas como Rutina de filtrado de
+            agua, Rutina de mantenimiento, optimizando el uso de energía y
+            brindando mayor comodidad en tu día a día.
+          </p>
+        </div>
       </div>
-      <div class="services_content">
-        <img
-          src="../../../../assets/img/RELOGWATER.gif"
-          class="services_img"
-          alt=""
-        />
-        <h3 class="services_title">Lorem ipsum</h3>
-        <p class="services_description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </p>
+
+      <div class="card">
+        <div class="card__img">
+          <img
+            src="../../../../assets/img/fugaagua.gif"
+            style="width: 16em; height: 16em"
+            alt=""
+          />
+        </div>
+        <div class="card__descr-wrapper">
+          <p class="card__title">Alerta de Fugas</p>
+          <p class="card__descr">
+            Detecta y notifica al instante la presencia de fugas y toma acciones
+            rápidas para evitar daños mayores mediante el Cierre automático de
+            la válvula principal de agua .
+          </p>
+        </div>
       </div>
-      <div class="services_content">
-        <img
-          src="../../../../assets/img/fugaagua.gif"
-          style="width: 15em"
-          class="services_img"
-          alt=""
-        />
-        <h3 class="services_title">Lorem ipsum</h3>
-        <p class="services_description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </p>
-      </div>
-      <div class="services_content">
-        <img
-          src="../../../../assets/img/reporte.gif"
-          class="services_img"
-          alt=""
-        />
-        <h3 class="services_title">Lorem ipsum</h3>
-        <p class="services_description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </p>
+
+      <div class="card">
+        <div class="card__img">
+          <img
+            src="../../../../assets/img/reporte.gif"
+            style="width: 16em; height: 16em"
+            alt=""
+          />
+        </div>
+        <div class="card__descr-wrapper">
+          <p class="card__title">Reportes Diarios</p>
+          <p class="card__descr">
+            Recopilan y presentan de manera organizada todos los datos
+            relevantes sobre la calidad del agua, niveles de pH, temperatura,
+            nivel de cloro, eventos de fugas y flujo de agua registrados a lo
+            largo del tiempo.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -231,31 +234,69 @@
   <section class="app section tk-container">
     <div class="app_container tk-grid">
       <div class="app_data">
-        <span class="section-subtitlePortafolio app_initial">App</span>
-        <h2 class="section-title app_initial">Descarga la App</h2>
-        <p class="app_description">Lorem ipsum dolor sit, adipisicing elit.</p>
+        <span class="h3 section-title">App Movil</span>
+        <h2 class="section-title app_initial">
+          <span class="ResaltadorAzul"> Descarga la App Hydropad</span>
+        </h2>
+        <p class="app_description">
+          Descarga la aplicación movil Hydropad y recibe notificaciones en
+          tiempo real sobre la calidad del agua, control domótico y el nivel de
+          suciedad del filtro. Aprovecha la comodidad de controlar y programar
+          horarios desde tu dispositivo móvil, brindándote una mayor facilidad y
+          flexibilidad.
+          <span class="ResaltadorAzul">
+            ¡Descarga la aplicación ahora y disfruta de todas estas funciones a
+            tu alcance!</span
+          >
+        </p>
         <div class="app_stores">
-          <a href="#"><img src="img/app1.png" alt="" class="app_store" /></a>
-          <a href="#"><img src="img/app2.png" alt="" class="app_store" /></a>
+          <a class="playstore-button" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              class="icon"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z"
+              ></path>
+            </svg>
+            <span class="texts">
+              <span class="text-1">Descargar</span>
+              <span class="text-2">Google Play</span>
+            </span>
+          </a>
         </div>
       </div>
 
-      <img src="../../../../assets/img/AppMobile.gif" alt="" class="app_img" />
+      <img
+        style="width: 100em"
+        src="../../../../assets/img/AppMobile.gif"
+        alt="movil"
+        class="app_img"
+      />
     </div>
   </section>
   <!-- SOBRE MI -->
-
+  <br />
   <!-- Creadores del Software -->
   <section class="about" id="creadores">
     <div class="creadores__texts">
-      <h2 class="subtitle">Hola, Soy Jordan, Tu Instructor.</h2>
+      <h3 class="h3 section-title" style="margin: 0 auto; text-align: center">
+        Nuestro Equipo de <span class="ResaltadorAzul"> Desarrollo </span>
+      </h3>
     </div>
     <br />
     <br />
     <!-- partial:index.partial.html -->
     <div class="canvas-wrapper">
       <a href="#" class="canvas">
-        <div class="canvas_border">
+        <div
+          class="canvas_border"
+          style="
+            box-shadow: 0 2px 4px rgba(91, 194, 228, 0.9); /* Agrega una sombra a tu menú */
+          "
+        >
           <svg>
             <defs>
               <linearGradient
@@ -271,7 +312,7 @@
                 ></stop>
                 <stop
                   offset="100%"
-                  style="stop-color: rgb(153, 75, 23); stop-opacity: 1"
+                  style="stop-color: rgb(8, 10, 81); stop-opacity: 1"
                 ></stop>
               </linearGradient>
               <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -307,7 +348,12 @@
         </div>
       </a>
       <a href="#" class="canvas">
-        <div class="canvas_border">
+        <div
+          class="canvas_border"
+          style="
+            box-shadow: 0 2px 4px rgba(91, 194, 228, 0.9); /* Agrega una sombra a tu menú */
+          "
+        >
           <svg>
             <defs>
               <linearGradient
@@ -352,9 +398,9 @@
           />
         </div>
         <div class="canvas_copy">
-          <span class="canvas_copy_subtitle">Heading</span>
-          <strong class="canvas_copy_title">Hello</strong>
-          <strong class="canvas_copy_title">World</strong>
+          <span class="canvas_copy_subtitle">Developer</span>
+          <strong class="canvas_copy_title">Kevin</strong>
+          <strong class="canvas_copy_title">Ponce</strong>
           <span class="canvas_copy_details">Details and stuff</span>
         </div>
       </a>
@@ -362,18 +408,24 @@
     <!-- partial -->
   </section>
 
+  <br />
+  <br />
+  <br />
+  <br />
   <!-- Seccion Contacto -->
   <section class="contact" id="contact">
     <div class="contact-content section-content">
       <p class="section-subtitle">Contact</p>
 
       <h2 class="h3 section-title">
-        Have You Any Project? Please Drop a Message
+        Tienes alguna consulta o problema que necesites resolver? <br />
+
+        <span class="ResaltadorAzul"> Por favor, envíe un mensaje </span>
       </h2>
 
       <p class="section-text">
-        Get in touch and let me know how i can help. Fill out the form and i’ll
-        be in touch as soon as possible.
+        Ponte en contacto y déjame saber cómo puedo ayudar. Rellena el
+        formulario y me pondré en contacto lo antes posible.
       </p>
 
       <ul class="contact-list">
@@ -386,7 +438,7 @@
             <h3 class="h4 contact-item-title">Address:</h3>
 
             <address class="contact-info">
-              941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
+              Av.Rosita Paredes, Quevedo, Los Rios, Ecuador
             </address>
           </div>
         </li>
@@ -399,7 +451,7 @@
           <div class="wrapper">
             <h3 class="h4 contact-item-title">Phone:</h3>
 
-            <a href="tel:09765432200" class="contact-info">(09) 765 432 200</a>
+            <p class="informacioncontact">(09) 845 432 20</p>
           </div>
         </li>
 
@@ -411,12 +463,8 @@
           <div class="wrapper">
             <h3 class="h4 contact-item-title">Email:</h3>
 
-            <a href="mailto:info@jack.com" class="contact-info"
-              >info@jack.com</a
-            >
-
-            <a href="mailto:support@jack.com" class="contact-info"
-              >support@jack.com</a
+            <a href="hydropad2023@gmail.com" class="informacioncontact"
+              >hydropad2023@gmail.com</a
             >
           </div>
         </li>
@@ -424,7 +472,11 @@
         <li>
           <ul class="contac-social-list">
             <li>
-              <a href="#" class="contact-social-link">
+              <a
+                href="#"
+                class="contact-social-link"
+                style="background: #003566"
+              >
                 <div class="tooltip">Facebook</div>
 
                 <i class="fa-brands fa-facebook"></i>
@@ -432,14 +484,22 @@
             </li>
 
             <li>
-              <a href="#" class="contact-social-link">
+              <a
+                href="#"
+                class="contact-social-link"
+                style="background: #003566"
+              >
                 <div class="tooltip">Twitter</div>
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="contact-social-link">
+              <a
+                href="#"
+                class="contact-social-link"
+                style="background: #003566"
+              >
                 <div class="tooltip">Linkedin</div>
 
                 <i class="fa-brands fa-linkedin"></i>
@@ -452,7 +512,7 @@
 
     <form action="" class="contact-form">
       <div class="form-wrapper">
-        <label for="name" class="form-label">Name</label>
+        <label for="name" class="form-label">Nombre</label>
 
         <div class="input-wrapper">
           <input
@@ -480,12 +540,15 @@
             class="input-field-Form"
           />
 
-          <i class="fa-solid fa-envelope interfazcobtact"></i>
+          <i
+            class="fa-solid fa-envelope interfazcobtact"
+            style="color: #003566"
+          ></i>
         </div>
       </div>
 
       <div class="form-wrapper">
-        <label for="phone" class="form-label">Phone</label>
+        <label for="phone" class="form-label">Telefono</label>
 
         <div class="input-wrapper">
           <input
@@ -493,7 +556,7 @@
             name="phone"
             id="phone"
             required
-            placeholder="Phone Number"
+            placeholder="Numero Telefono"
             class="input-field-Form"
           />
 
@@ -502,14 +565,14 @@
       </div>
 
       <div class="form-wrapper">
-        <label for="message" class="form-label">Message</label>
+        <label for="message" class="form-label">Mensaje</label>
 
         <div class="input-wrapper">
           <textarea
             name="message"
             id="message"
             required
-            placeholder="Write message..."
+            placeholder="Escribe el mensaje..."
             class="input-field-Form"
           ></textarea>
 
@@ -517,9 +580,9 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary">Send</button>
+      <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
   </section>
 </main>
 
-<footer class="footer section tk-container"></footer>
+<!-- <footer class="footer section tk-container">Donald</footer> -->

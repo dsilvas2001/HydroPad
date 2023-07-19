@@ -99,7 +99,7 @@ strong {
   bottom: 0;
   left: 85%;
   text-transform: uppercase;
-  color: #dac527;
+  color: #6610f2;
   z-index: 100;
 }
 
@@ -112,7 +112,7 @@ strong {
   display: block;
   transform: translateX(-80px);
   transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
-  color: black;
+  color: rgb(183, 255, 0);
 }
 .canvas_copy_title:nth-child(1) {
   transition-delay: 0.1s;

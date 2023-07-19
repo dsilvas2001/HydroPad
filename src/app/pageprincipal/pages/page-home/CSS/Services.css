@@ -17,7 +17,7 @@
   --font-color: #f9f9f9;
   --bg-color: #7d63f1;
   width: 250px;
-  height: 400px;
+  height: 430px;
   border-radius: 20px;
   background: var(--bg-color);
   box-shadow: -9px 9px 18px #5a5a5a, 9px -9px 18px #ffffff;
@@ -34,7 +34,7 @@
 
 .card__img {
   width: 100%;
-  height: 60%;
+  height: 58%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
   background-color: blueviolet;
@@ -43,6 +43,8 @@
 .card__descr-wrapper {
   padding: 15px;
   display: grid;
+  color: #ffffff;
+  text-align: center;
 }
 
 .card__title {

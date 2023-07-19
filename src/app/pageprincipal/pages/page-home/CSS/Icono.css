@@ -3,7 +3,7 @@
 .fa-light,
 .fa-duotone,
 .fa-brands {
-  color: black;
+  color: #003566;
 }
 .fa-facebook,
 .fa-twitter,
@@ -12,3 +12,34 @@
 }
 
 /* https://github.com/codingstella/jack-portfolio/blob/main/index.html */
+
+.ResaltadorAzul {
+  color: #2987df;
+}
+
+/*boton que desplaza hacia arriba*/
+.arriba {
+  display: none;
+  padding: 13px;
+  background: url("../../../../../assets/img/GotaWater.png") center/contain
+    no-repeat;
+  background-size: 70%; /* Ajusta el tamaño de la imagen */
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px; /* Ajusta el tamaño del botón */
+  height: 50px; /* Ajusta el tamaño del botón */
+  border-radius: 50%; /* Ajusta el radio del borde */
+  text-align: center;
+}
+.arriba::before {
+  font-size: 20px; /* Ajusta el tamaño del icono */
+  line-height: 27px; /* Ajusta la altura de línea igual al tamaño del botón */
+  text-align: center;
+  right: 60px;
+}
+
+/*Fin boton que desplaza hacia arriba*/

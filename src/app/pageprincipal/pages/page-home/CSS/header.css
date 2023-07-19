@@ -50,7 +50,9 @@ body {
   height: 30px;
   position: relative;
 }
-
+.nav__logo {
+  width: 200px;
+}
 .nav__button {
   position: absolute;
   inset: 0;
@@ -236,7 +238,7 @@ body {
 }
 
 .features__tab--active {
-  border-color: hsl(0, 94%, 66%);
+  border-color: hsl(239, 81%, 32%);
 }
 
 .features__container {
@@ -502,9 +504,9 @@ body {
 
 /* footer */
 
-.footer {
+/* .footer {
   background-color: hsl(229, 31%, 21%);
-}
+} */
 
 .footer__container {
   width: 90%;
@@ -584,7 +586,7 @@ body {
     border: none;
     color: white;
     padding: 0.6rem 1.5rem;
-    background-color: hsl(0, 94%, 66%);
+    background-color: hsl(260, 82%, 37%);
     box-shadow: -5px 2px 3px hsl(229, 8%, 60%);
   }
 

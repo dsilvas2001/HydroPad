@@ -7,20 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="./assets/img/ICON.ico" />
 
+    <!-- ========== botom arriba links ========== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  </link>
+
+    <script>
+      $(document).ready(function () {
+        /*aqui planteamos que el boton tenga una animación al momento de desaparecer*/
+        console.log("inicia");
+        $("#arribaSpan").on("click", function () {
+          $("body,html").animate(
+            {
+              scrollTop: 0,
+            },
+            300
+          );
+        });
+        $(window).scroll(function () {
+          /*aqui le indicamos que al momento  que se esta deslizando
+           * hacia arriba gracias a la función "function" esta llamando a la animación*/
+          if ($(this).scrollTop() > 0) {
+            $(".arriba").slideDown(300);
+          } else {
+            /*En este caso el boton esta a la vista del usuario*/
+            $(".arriba").slideUp(300);
+          }
+        });
+      });
+    </script>
+
     <!-- ========== WebFont ========== -->
     <script
       src="https://kit.fontawesome.com/18096001b9.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://fonts.googleapis.com/css?family=Lato:300,900"
+      crossorigin="anonymous"
+    ></script>
     <!-- 
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- nuevo -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,21 +60,25 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- ========== java botom arriba========== -->
   </head>
 
   <body>
     <app-root></app-root>
-    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-
-    <!-- <script src="assets/Js/PageHome.js"></script> -->
+    <!-- ========== Accessibilidad========== -->
+    <script>
+      (function (d) {
+        var s = d.createElement("script");
+        s.setAttribute("data-account", "OGRNOa8KSi");
+        s.setAttribute("src", "https://cdn.userway.org/widget.js");
+        (d.body || d.head).appendChild(s);
+      })(document);
+    </script>
+    <noscript
+      >Please ensure Javascript is enabled for purposes of
+      <a href="https://userway.org">website accessibility</a></noscript
+    >
   </body>
 </html>
