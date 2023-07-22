@@ -1,16 +1,3 @@
-:root {
-  --red: hsl(0, 78%, 62%);
-  --cyan: hsl(180, 62%, 55%);
-  --orange: hsl(34, 97%, 64%);
-  --blue: hsl(212, 86%, 64%);
-  --varyDarkBlue: hsl(234, 12%, 34%);
-  --grayishBlue: hsl(229, 6%, 66%);
-  --veryLightGray: hsl(0, 0%, 98%);
-  --weight1: 200;
-  --weight2: 400;
-  --weight3: 600;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -44,24 +31,25 @@ h1:last-of-type {
 .encabezadoHallazgo p {
   margin: 0 auto;
   line-height: 2;
-  color: hsl(229, 6%, 66%);
+  color: hsl(230, 5%, 45%);
 }
 
 .box p {
   color: hsl(230, 100%, 99%);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
 }
 
 .box {
-  border-radius: 5px;
+  border-radius: 25px;
   box-shadow: 0px 30px 40px -50px hsl(229, 6%, 66%);
   padding: 30px;
   margin: 20px;
 }
 
-img {
+/* img {
   float: right;
-}
+} */
 
 @media (max-width: 450px) {
   .box {
@@ -113,10 +101,64 @@ h2 {
     top: 150px;
   }
   .box {
-    width: 20%;
+    width: 21%;
     background: blueviolet;
   }
   .encabezadoHallazgo p {
     width: 30%;
   }
+}
+
+/* Definir la animación */
+@keyframes flotarImagenes {
+  0%,
+  100% {
+    transform: translateY(0); /* Posición inicial y final */
+  }
+  50% {
+    transform: translateY(-8px); /* Mover las imágenes 5px hacia arriba */
+  }
+}
+
+/* Aplicar la animación a las imágenes */
+.fotosHallazgo {
+  width: 27em;
+  animation: flotarImagenes 3s infinite; /* La animación se repetirá infinitamente durante 3 segundos */
+}
+
+/* Estilos generales */
+
+/* ... (los estilos generales previos se mantienen aquí) ... */
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .hallazgoAgua {
+    margin-top: 20px; /* Ajustar el margen superior en dispositivos móviles */
+  }
+  .row1-container,
+  .row2-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    margin: 10px 0;
+    background: blueviolet;
+  }
+
+  .box-down {
+    top: 0;
+  }
+
+  .encabezadoHallazgo p {
+    width: 100%;
+  }
+
+  .fotosHallazgo {
+    display: none; /* Ocultar las imágenes en dispositivos móviles */
+  }
+
+  /* Mantener los colores de los cuadros */
 }

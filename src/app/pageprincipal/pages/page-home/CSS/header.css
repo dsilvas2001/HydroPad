@@ -74,6 +74,8 @@ body {
   text-align: center;
   padding: 1.5rem 0;
   border-top: 1px solid #fff;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .nav__link {
@@ -110,14 +112,12 @@ body {
 
 .hero__figure {
   grid-column: 1/4;
-  padding: 2rem 0;
-  position: relative;
+  padding: 2rem;
 }
 
 .hero__figure::before {
   content: "";
   position: absolute;
-  background-color: hsl(231, 69%, 60%);
   width: 60%;
   max-width: 450px;
   bottom: 30px;
@@ -142,12 +142,14 @@ body {
 .hero__title {
   font-size: 2rem;
   color: hsl(229, 31%, 21%);
+  font-family: "Lato", sans-serif;
 }
 
 .hero__paragraph {
-  color: hsl(229, 8%, 60%);
+  color: hsl(230, 5%, 45%);
   line-height: 1.5;
   margin: 1.3rem 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .hero__buttons {

@@ -40,3 +40,36 @@
 .text-2 {
   font-weight: 600;
 }
+
+/* Header descargar App Movil */
+
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #ff7d00;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 125, 0, 1) 0%,
+    rgba(255, 95, 109, 1) 100%
+  );
+  border: 2px solid #ff7d00;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.cssbuttons-io-button:hover {
+  border-color: white;
+  box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #bf5800;
+}

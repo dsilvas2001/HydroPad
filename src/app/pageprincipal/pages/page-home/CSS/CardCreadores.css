@@ -1,23 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,900");
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  background: #eee;
-  padding: 100px 60px;
-  -webkit-animation: fade-in 3s ease-in-out forwards;
-  animation: fade-in 3s ease-in-out forwards;
-}
-
 strong {
   font-weight: 900;
 }
@@ -241,4 +221,51 @@ strong {
 
 ::-webkit-scrollbar-thumb {
   background-color: blue;
+}
+
+/* Tu código CSS existente aquí */
+
+@media screen and (max-width: 768px) {
+  .canvas-wrapper {
+    flex-direction: column;
+  }
+
+  .canvas {
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .canvas_border {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .canvas_img-wrapperContenerdor {
+    justify-content: center;
+  }
+
+  .canvas_copy {
+    position: relative;
+    left: 0;
+    text-align: center;
+  }
+
+  .canvas_copy_title,
+  .canvas_copy_subtitle,
+  .canvas_copy_details {
+    transform: translateX(0);
+  }
+
+  .canvas_copy_subtitle {
+    transform: rotate(0) translateY(0) translateX(0);
+  }
+
+  .canvas_img {
+    transform: scale3d(1, 1, 1);
+    opacity: 1;
+    margin-left: 0;
+  }
 }

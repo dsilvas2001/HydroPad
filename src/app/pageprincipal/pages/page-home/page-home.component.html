@@ -1,7 +1,7 @@
 <header class="hero l-header">
   <nav class="nav container">
     <figure class="nav__figure">
-      <img src="../../../../assets/img/LogoHydroPad.png" class="nav__logo" />
+      <img src="../../../../assets/img/Hydropad.png" class="nav__logo" />
     </figure>
 
     <div class="nav__hamburguer">
@@ -11,19 +11,50 @@
     <div class="nav__container">
       <ul class="nav__list container">
         <li class="nav__element">
-          <a href="#" class="nav__link">Features</a>
+          <a class="nav__link" (click)="scrollToSectionDesplzamiento('#home')"
+            >Home</a
+          >
+        </li>
+        <li class="nav__element">
+          <a (click)="scrollToSectionDesplzamiento('#about')" class="nav__link"
+            >Sobre Nosotros</a
+          >
+        </li>
+        <li class="nav__element">
+          <a
+            (click)="scrollToSectionDesplzamiento('#hallazgoClaves')"
+            class="nav__link"
+            >Hallazgos Claves
+          </a>
         </li>
 
         <li class="nav__element">
-          <a href="#" class="nav__link">Pricing</a>
+          <a
+            (click)="scrollToSectionDesplzamiento('#services')"
+            class="nav__link"
+            >Servicios</a
+          >
         </li>
 
         <li class="nav__element">
-          <a href="#" class="nav__link">Contact</a>
+          <a
+            (click)="scrollToSectionDesplzamiento('#creadores')"
+            class="nav__link"
+            >Creadores</a
+          >
+        </li>
+        <li class="nav__element">
+          <a
+            (click)="scrollToSectionDesplzamiento('#contact')"
+            class="nav__link"
+            >Contactos</a
+          >
         </li>
 
         <li class="nav__element">
-          <a href="#" class="nav__link nav__link--last">Login</a>
+          <a [routerLink]="'#appmovil'" class="nav__link nav__link--last"
+            >Login</a
+          >
         </li>
       </ul>
 
@@ -41,7 +72,7 @@
 </header>
 
 <!-- boton que desliza para arriba -->
-<span class="arriba bx bxs-up-arrow" id="arribaSpan"></span>
+<span class="arriba bx bxs-up-arrow" id="arribaSpan" title="Arriba"></span>
 
 <!-- Fin del boton que desliza para arriba -->
 
@@ -51,24 +82,91 @@
       
     </div>
   </section> -->
-  <section class="hero__main container home">
+
+  <section class="hero__main container home" id="home">
     <figure class="hero__figure">
-      <img src="../../../../assets/img/LogoHydroPad.png" class="hero__img" />
+      <img src="../../../../assets/img/HydropadLogo.png" class="hero__img" />
     </figure>
-
     <article class="hero__texts">
-      <h1 class="hero__title">A Simple Bookmark Manager</h1>
+      <h1 class="hero__title" style="font-size: 2em">
+        <span class="ResaltadorAzul"><strong> HydroPad:</strong></span> Sistema
+        Inteligente de Monitoreo de Calidad del Agua basado en IoT
+      </h1>
       <p class="hero__paragraph">
-        A clean and simple interface to organize your favourite websites. Open a
-        new browser tab and see your sites load instantly. Try it for free.
-      </p>
-
-      <div class="hero__buttons">
-        <a href="#" class="hero__button"> Get it on Chrome</a>
-
-        <a href="#" class="hero__button hero__button--white">
-          Get it on Firefox</a
+        <span class="ResaltadorAzul"
+          ><strong>Bienvenido a HydroPad</strong></span
         >
+        , la compañía líder en soluciones inteligentes para el monitoreo de la
+        calidad del agua basado en IoT (Internet de las cosas). Nuestro
+        innovador sistema utiliza sensores avanzados de pH, temperatura y
+        niveles de cloro para garantizar una supervisión precisa, asegurando que
+        esté siempre lista para el consumo humano.
+      </p>
+      <p class="hero__paragraph">
+        En HydroPad, estamos comprometidos con tu bienestar y tranquilidad.
+        Únete a nuestra comunidad y disfruta del acceso sin precedentes al
+        monitoreo inteligente de la calidad del agua en tu hogar.
+        <span class="ResaltadorAzul" style="font-size: 1.5em"
+          >¡Regístrate ahora y toma el control de tu agua!</span
+        >
+      </p>
+      <div class="hero__buttons">
+        <a class="LognIn">
+          <div>Iniciar Sesion</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25px"
+            height="25px"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M11.6801 14.62L14.2401 12.06L11.6801 9.5"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M4 12.0601H14.17"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M12 4C16.42 4 20 7 20 12C20 17 16.42 20 12 20"
+              stroke="white"
+              stroke-width="2"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </a>
+
+        <a
+          class="cssbuttons-io-button"
+          (click)="scrollToSectionDesplzamiento('#appmovil')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              fill="currentColor"
+              d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
+            ></path>
+          </svg>
+          <span style="font-family: 'Roboto', sans-serif"
+            >Descargar Aplicacion Movil</span
+          >
+        </a>
       </div>
     </article>
   </section>
@@ -76,15 +174,26 @@
   <section class="about section tk-container" id="about">
     <div class="about_container tk-grid">
       <div class="about_data">
-        <span class="section-subtitlePortafolio about_initial">Nosotros</span>
+        <span class="section-subtitlePortafolio about_initial"
+          >Descubre más sobre HydroPad</span
+        >
         <h2 class="section-title about_initial">
-          Lorem ipsum dolor sit<br />
-          lorem
+          Monitoreo Inteligente de Calidad del Agua
         </h2>
         <p class="about_description">
-          Lorem ipsum dolor sit lorem ipsum dolor sit
+          Somos un innovador sistema de monitoreo inteligente de la calidad del
+          agua basado en IoT (Internet de las cosas). Nuestra tecnología utiliza
+          sensores avanzados para garantizar que el agua que consumes en tu
+          hogar esté siempre en las mejores condiciones para tu salud y
+          bienestar.
         </p>
-        <a href="#" class="button">Explore</a>
+        <p class="about_description">
+          Nuestro objetivo es brindarte una experiencia de usuario intuitiva y
+          segura, asegurándonos de que siempre cuentes con agua de calidad en
+          cada momento de tu vida diaria. Confía en HydroPad para cuidar tu
+          agua, cuidar de ti y cuidar de nuestro planeta. ¡Descubre cómo podemos
+          mejorar tu vida hoy!
+        </p>
       </div>
       <div class="about_data">
         <img src="../../../../assets/img/grifo.gif" alt="" class="about_img" />
@@ -93,52 +202,93 @@
   </section>
 
   <!-- Hallazgo -->
-  <section class="hallazgoAgua">
+  <section class="hallazgoAgua" id="hallazgoClaves">
     <div class="encabezadoHallazgo">
       <h2 class="h3 section-titless" style="text-align: center; font-size: 3em">
-        Hallazgos <span class="ResaltadorAzul"> Clave </span>
+        Hallazgos <span class="ResaltadorAzul"> Claves </span>
       </h2>
       <br />
       <br />
 
-      <p>
-        Our Artificial Intelligence powered tools use millions of project data
-        points to ensure that your project is successful
+      <p
+        style="
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+            sans-serif;
+        "
+      >
+        En la búsqueda constante por garantizar un acceso seguro y sostenible al
+        agua de buena calidad, la sociedad enfrenta diversos desafíos que
+        impactan directamente en nuestra salud, bienestar y el cuidado del medio
+        ambiente. <span class="ResaltadorAzul"> Problemas como:</span>
       </p>
     </div>
     <div class="row1-container">
       <div class="box box-down cyan">
-        <h2 class="subtitulohallazgo">Ahorro de Agua</h2>
+        <h2 class="subtitulohallazgo">Escasez de agua</h2>
         <br />
-        <p>Monitors activity to identify project roadblocks</p>
-        <img src="../../../../assets/img/aguacontaminada.png" alt="" />
+        <p>
+          En momentos de escasez, la bomba de agua puede dañarse al extraer aire
+          en lugar de agua, afectando su funcionamiento y dificultando aún más
+          el acceso al recurso vital.
+        </p>
+        <br />
+        <br />
+        <img
+          class="fotosHallazgo"
+          src="../../../../assets/img/ProblemaConsumoAgua.png"
+          alt=""
+        />
       </div>
 
       <div class="box red">
-        <h2>Agua Contaminada</h2>
+        <h2>Contaminación del agua:</h2>
         <br />
         <p>
-          Scans our talent network to create the optimal team for your project
+          La ingesta de agua contaminada puede causar enfermedades
+          gastrointestinales, infecciones, problemas respiratorios y daños en
+          órganos vitales.
         </p>
-        <img src="../../../../assets/img/aguacontaminada.png" alt="" />
+        <br />
+        <br />
+        <img
+          class="fotosHallazgo"
+          src="../../../../assets/img/aguacontaminada.png"
+          alt=""
+        />
       </div>
 
       <div class="box box-down blue">
         <h2>Desperdicio de agua</h2>
         <br />
-        <p>Uses data from past projects to provide better delivery estimates</p>
+        <p>
+          El malgasto de agua no solo afecta nuestra disponibilidad de recursos
+          hídricos, sino que también tiene un impacto negativo en el medio
+          ambiente.
+        </p>
+        <br />
         <img
-          src="https://assets.codepen.io/2301174/icon-calculator.svg"
+          class="fotosHallazgo"
+          src="../../../../assets/img/WaterDesbordar.png"
           alt=""
         />
       </div>
     </div>
     <div class="row2-container">
       <div class="box orange">
-        <h2>Karma</h2>
+        <h2>Alto consumo de Luz:</h2>
         <br />
-        <p>Regularly evaluates our talent to ensure quality</p>
-        <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+        <p>
+          El uso de dispositivos sin un control adecuado mantiene un alto
+          consumo de luz. Sin una regulación adecuada, se desperdicia una
+          cantidad considerable de energía eléctrica.
+        </p>
+        <br />
+        <br />
+        <img
+          class="fotosHallazgo"
+          src="../../../../assets/img/ConsumoLuz.png"
+          alt=""
+        />
       </div>
     </div>
   </section>
@@ -231,7 +381,7 @@
     </div>
   </section>
 
-  <section class="app section tk-container">
+  <section class="app section tk-container" id="appmovil">
     <div class="app_container tk-grid">
       <div class="app_data">
         <span class="h3 section-title">App Movil</span>
@@ -240,10 +390,11 @@
         </h2>
         <p class="app_description">
           Descarga la aplicación movil Hydropad y recibe notificaciones en
-          tiempo real sobre la calidad del agua, control domótico y el nivel de
-          suciedad del filtro. Aprovecha la comodidad de controlar y programar
-          horarios desde tu dispositivo móvil, brindándote una mayor facilidad y
-          flexibilidad.
+          tiempo real sobre la calidad del agua, control domótico, el nivel de
+          suciedad del filtro y el asistente de voz de Google, te mantendremos
+          informado en tiempo real sobre el estado de tu agua. Aprovecha la
+          comodidad de controlar y programar horarios desde tu dispositivo
+          móvil, brindándote una mayor facilidad y flexibilidad.
           <span class="ResaltadorAzul">
             ¡Descarga la aplicación ahora y disfruta de todas estas funciones a
             tu alcance!</span
@@ -290,7 +441,7 @@
     <br />
     <!-- partial:index.partial.html -->
     <div class="canvas-wrapper">
-      <a href="#" class="canvas">
+      <a href="#" class="canvas primerfoto">
         <div
           class="canvas_border"
           style="
@@ -393,7 +544,7 @@
         <div class="canvas_img-wrapperContenerdor">
           <img
             class="canvas_img"
-            src="../../../../assets/img/FotoPerfil.png"
+            src="../../../../assets/img/perfilPonce.png"
             alt=""
           />
         </div>
