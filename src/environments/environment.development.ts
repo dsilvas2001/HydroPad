@@ -7,6 +7,4 @@ export const environment = {
     authDomain: 'hydropad-c1a22.firebaseapp.com',
     messagingSenderId: '819632060551',
     measurementId: 'G-EHVBVVMMZK',
-  },
-    production: true
-  };
+  },};

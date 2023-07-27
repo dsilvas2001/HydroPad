@@ -52,7 +52,7 @@
         </li>
 
         <li class="nav__element">
-          <a [routerLink]="'#appmovil'" class="nav__link nav__link--last"
+          <a routerLink="/auth/login" class="nav__link nav__link--last"
             >Login</a
           >
         </li>
@@ -111,7 +111,7 @@
         >
       </p>
       <div class="hero__buttons">
-        <a class="LognIn">
+        <a class="LognIn" routerLink="/auth/login">
           <div>Iniciar Sesion</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -731,7 +731,9 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary">Enviar</button>
+      <button type="submit" style="cursor: pointer" class="btn btn-primary">
+        Enviar
+      </button>
     </form>
   </section>
 </main>

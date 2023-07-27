@@ -173,7 +173,14 @@ body {
   background-color: #fff;
   color: hsl(229, 8%, 60%);
 }
-
+@media screen and (max-width: 768px) {
+  .hero__buttons {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos uno debajo del otro */
+    align-items: center; /* Alinea horizontalmente los elementos en el centro */
+    gap: 1rem; /* Espacio entre los elementos */
+  }
+}
 /* features */
 
 .features {

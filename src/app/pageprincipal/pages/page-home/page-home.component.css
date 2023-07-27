@@ -113,12 +113,11 @@ img {
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding-top: 90rem;
-  width: 100px;
   justify-content: center;
-  align-items: center;
-  height: 43em;
+  min-height: 110vh; /* Ajusta la altura a la altura total de la ventana del navegador */
+  padding-top: 2rem; /* Agrega un poco de espacio en la parte superior del contenido */
 }
+
 /* .home {
   width: 100px;
   height: 38rem;

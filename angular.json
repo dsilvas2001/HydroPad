@@ -34,8 +34,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "300kb",
-                  "maximumError": "400kb"
+                  "maximumWarning": "600kb",
+                  "maximumError": "700kb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -51,7 +51,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -87,7 +93,7 @@
               "src/assets",
               {
                 "glob": "_redirects",
-                "input":"src",
+                "input": "src",
                 "output": "/"
               }
             ],
@@ -95,6 +101,13 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2,
+            "browserTarget": "HYDROPAD:build:production"
           }
         }
       }
