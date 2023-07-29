@@ -11,14 +11,17 @@ import { AuthservicesService } from '../../Services/authservices.service';
 })
 export class LoginComponent implements OnInit, AfterViewInit{
   email: string = '';
-  tipoUsuario: string;
 
  password: string = '';
+
+
  nameUser: string = '';
+ emailRegister: string = '';
+
+passwordRegister: string = '';
 
  constructor(private auth: AuthservicesService) { 
 
-    this.tipoUsuario = '';
 
   }
 
@@ -27,15 +30,16 @@ export class LoginComponent implements OnInit, AfterViewInit{
   }
   register()
   {
+
     if (this.nameUser == '') {
       this.espacioenblancosNombre();
       return;
     }
-    if (this.email == '') {
+    if (this.emailRegister == '') {
      this.espacioenblancosEmail();
       return;
     }
-    if (this.password == '') {
+    if (this.passwordRegister == '') {
       this.espacioenblancoscontrasena();
       return;
     }
@@ -43,28 +47,55 @@ export class LoginComponent implements OnInit, AfterViewInit{
       this.cantidadCaracteresPassword();
       return;
     }
+    if (!this.emailValido(this.emailRegister)) {
+      this.formatoEmailInvalido();
+      return;
+    }
 
-    this.auth.register(this.nameUser,this.email, this.password);
+    this.auth.register(this.nameUser,this.emailRegister, this.passwordRegister);
     this.nameUser = '';
-    this.email = '';
-    this.password = '';
+    this.emailRegister = '';
+    this.passwordRegister = '';
   }
 
   login()
   {
     if (this.email == '') {
-      alert('Ingresa Email');
+      this.espacioenblancosEmail();
       return;
     }
     if (this.password == '') {
-      alert('Ingresa password');
+     this.espacioenblancoscontrasena();
+      return;
+    }
+    if (!this.emailValido(this.email)) {
+      this.formatoEmailInvalido();
       return;
     }
 
-    // this.auth.login(this.email, this.password);
-    // this.email = '';
-    // this.password = '';
+    this.auth.login(this.email, this.password);
+    this.email = '';
+    this.password = '';
   }
+
+
+
+  //GEOOGLE
+  signInWithGeoogle()
+  {
+    this.auth.googleSignIn();
+  }
+
+  //Control de Sintaxis Email
+
+  emailValido(tipoemail:string): boolean {
+    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return pattern.test(tipoemail);
+  }
+  
+
+
+
   // Alertas 
 
 
@@ -104,8 +135,15 @@ export class LoginComponent implements OnInit, AfterViewInit{
       confirmButtonText: 'Entendido!'
     })
   }
-
-
+  formatoEmailInvalido() {
+    Swal.fire({
+      title: 'Formato de email inválido',
+      text: 'Por favor, ingrese un email válido.',
+      icon: 'error',
+      confirmButtonColor: '#3085d6',
+      confirmButtonText: 'Entendido!'
+    });
+  }
 
   // Codio JS
   ////////////////////////////////////////////////////////////////

@@ -9,7 +9,7 @@
           </span>
         </h1>
         <div class="social-links">
-          <button class="button">
+          <button class="button" (click)="signInWithGeoogle()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid"
@@ -44,13 +44,19 @@
         <input
           type="email"
           name="email"
-          [(ngModel)]="email"
+          [(ngModel)]="emailRegister"
           placeholder="email"
         />
+        <div
+          style="color: red"
+          *ngIf="!emailValido(emailRegister) && emailRegister !== ''"
+        >
+          El formato del email no es válido.
+        </div>
         <input
           type="password"
           name="registerpassword"
-          [(ngModel)]="password"
+          [(ngModel)]="passwordRegister"
           placeholder="Password"
         />
         <br />
@@ -104,7 +110,7 @@
           </span>
         </h1>
         <div class="social-links">
-          <button class="button">
+          <button class="button" (click)="signInWithGeoogle()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMidYMid"
@@ -131,8 +137,21 @@
           </button>
         </div>
 
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input
+          type="email"
+          name="emailLogin"
+          [(ngModel)]="email"
+          placeholder="Email"
+        />
+        <div style="color: red" *ngIf="!emailValido(email) && email !== ''">
+          El formato del email no es válido.
+        </div>
+        <input
+          type="password"
+          name="passwordLogin"
+          [(ngModel)]="password"
+          placeholder="Password"
+        />
         <br />
         <br />
         <div class="btn-conteiner">

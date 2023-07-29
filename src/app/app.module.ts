@@ -29,6 +29,9 @@ import { AngularFireModule } from '@angular/fire/compat';
     RouterModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
+    
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
   //   provideAuth(() => 
   //   {
