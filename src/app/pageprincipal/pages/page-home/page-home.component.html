@@ -661,15 +661,15 @@
       </ul>
     </div>
 
-    <form action="" class="contact-form">
+    <form action="" class="contact-form" id="form" (submit)="sendEmail($event)">
       <div class="form-wrapper">
         <label for="name" class="form-label">Nombre</label>
 
         <div class="input-wrapper">
           <input
             type="text"
-            name="name"
-            id="name"
+            name="from_name"
+            id="from_name"
             required
             placeholder="e.g John Doe"
             class="input-field-Form"
@@ -684,8 +684,8 @@
         <div class="input-wrapper">
           <input
             type="email"
-            name="email"
-            id="email"
+            name="email_id"
+            id="email_id"
             required
             placeholder="e.g johndoe@mail.com"
             class="input-field-Form"
@@ -731,7 +731,12 @@
         </div>
       </div>
 
-      <button type="submit" style="cursor: pointer" class="btn btn-primary">
+      <button
+        type="submit"
+        id="buttonContact"
+        style="cursor: pointer"
+        class="btn btn-primary"
+      >
         Enviar
       </button>
     </form>

@@ -29,3 +29,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Sweetalert
 
 npm install sweetalert2 @sweetalert2/ngx-sweetalert2
+
+## Angular Firebase
+
+ng add @angular/fire
+
+## Email.JS Contactanos
+
+npm install emailjs-com --save
