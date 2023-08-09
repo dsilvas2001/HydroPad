@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./pagenotfound/pagenotfound.module').then(m=>m.PagenotfoundModule)
   },
   {
+    path:'pagina-user',
+    loadChildren: () => import('./pagina-user/pagina-user.module').then(m=>m.PaginaUserModule)
+  },
+  {
     path:'**',
     redirectTo: 'pageprincipal'
   }

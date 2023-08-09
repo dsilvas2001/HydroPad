@@ -1,0 +1,115 @@
+<div class="container-scroller">
+  <!-- partial:partials/_navbar.html -->
+  <!-- Encabezado -->
+  <app-encabezadodashboard></app-encabezadodashboard>
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <!-- Menu -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+      <ul class="nav">
+        <li class="nav-item nav-profile">
+          <a href="#" class="nav-link">
+            <div class="nav-profile-image">
+              <img src="../../../../assets/img/aguaperfil.jpg" alt="profile" />
+              <span class="login-status online"></span>
+              <!--change to offline or busy as needed-->
+            </div>
+            <div class="nav-profile-text d-flex flex-column">
+              <span class="font-weight-bold mb-2">Donald Silva</span>
+              <span class="text-secondary text-small">Usuario</span>
+            </div>
+            <i
+              class="mdi mdi-bookmark-check text-success nav-profile-badge"
+            ></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pagina-user/HomeUser">
+            <span class="menu-title">Dashboard</span>
+            <i class="mdi mdi-home menu-icon"></i>
+          </a>
+        </li>
+
+        <li class="sidebar-submenu nav-item">
+          <a href="#" class="sidebar-menu-dropdown nav-link">
+            <span class="submenupersonalizado">Control Del Agua</span>
+
+            <i class="mdi mdi-chart-bar menu-icon"></i>
+
+            <div class="dropdown-icon submenucalidad"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content showCalidad">
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Control Diario </a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Calidad Del Agua </a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Temperatura</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidebar-submenu nav-item">
+          <a href="#" class="sidebar-menu-dropdown nav-link">
+            <span class="submenupersonalizado">Control Domotico</span>
+
+            <i class="mdi mdi-chart-line menu-icon"></i>
+
+            <div class="dropdown-icon submenuDomotico"></div>
+          </a>
+          <ul class="sidebar-menu sidebar-menu-dropdown-content showdomotico">
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Control Diario </a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Calidad Del Agua </a>
+            </li>
+            <li>
+              <i
+                class="fa-solid fa-right-long fa-beat"
+                style="color: #3e85fe"
+              ></i>
+              <a href="#"> Temperatura</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/pagina-user/PanelConversemos">
+            <span class="menu-title">Conversemos</span>
+            <i class="mdi mdi-message-text menu-icon"></i>
+          </a>
+        </li>
+
+        <li class="nav-item sidebar-actions">
+          <button class="btn btn-block btn-lg btn-gradient-primary mt-4">
+            Cerrar Sesion
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->

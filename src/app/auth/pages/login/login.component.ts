@@ -43,7 +43,7 @@ passwordRegister: string = '';
       this.espacioenblancoscontrasena();
       return;
     }
-    if (this.password.length < 6) {
+    if (this.passwordRegister.length < 6) {
       this.cantidadCaracteresPassword();
       return;
     }
@@ -93,6 +93,79 @@ passwordRegister: string = '';
     return pattern.test(tipoemail);
   }
   
+
+
+  ///RECORDAR CONTRASEÑA 
+
+  // RecordarPassword()
+  // {
+  //   Swal.fire({
+  //     title: 'Introduce tu Email para validar tu cuenta:',
+  //     input: 'text',
+  //     inputAttributes: {
+  //       autocapitalize: 'off'
+  //     },
+  //     showCancelButton: true,
+  //     confirmButtonText: 'Verificar',
+  //     showLoaderOnConfirm: true,
+  //     preConfirm: (login) => {
+  //       return fetch(`//api.github.com/users/${login}`)
+  //         .then(response => {
+  //           if (!response.ok) {
+  //             throw new Error(response.statusText)
+  //           }
+  //           return response.json()
+  //         })
+  //         .catch(error => {
+  //           Swal.showValidationMessage(
+  //             `Request failed: ${error}`
+  //           )
+  //         })
+  //     },
+  //     allowOutsideClick: () => !Swal.isLoading()
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       Swal.fire({
+  //         title: `${result.value.login}'s avatar`,
+  //         imageUrl: result.value.avatar_url
+  //       })
+  //     }
+  //   })
+  // }
+
+  recordarPassword() {
+    Swal.fire({
+      title: 'Introduce tu Email para restablecer tu contraseña:',
+      input: 'email',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Enviar',
+      showLoaderOnConfirm: true,
+      preConfirm: (email) => {
+        return this.auth.forgotPassword(email)
+          .then(() => {
+            return true; // Indica que la operación fue exitosa
+          })
+          .catch(() => {
+            Swal.showValidationMessage('El correo electrónico ingresado no es válido o no está registrado.');
+          });
+      },
+      allowOutsideClick: () => !Swal.isLoading()
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Correo enviado',
+          text: 'Se ha enviado un correo electrónico con instrucciones para restablecer tu contraseña.',
+          icon: 'success',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'Aceptar'
+        });
+      }
+    });
+  }
+
 
 
 

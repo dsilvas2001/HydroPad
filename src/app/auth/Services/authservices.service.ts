@@ -36,7 +36,7 @@ export class AuthservicesService {
           confirmButtonText: 'Aceptar'
         });
   
-        this.router.navigate(['/pageprincipal/page-home']);
+        this.router.navigate(['/pagenotfound/page404-found.component']);
 
       } else {
         Swal.fire({
@@ -106,7 +106,7 @@ export class AuthservicesService {
     this.fireauth.createUserWithEmailAndPassword(email, password).then(res => {
       if (res.user) {
         // Registro exitoso
-        this.saveUserNameToFirestore(res.user.uid, nombreUser); // Agregamos el nombre del usuario a Firestore
+        this.saveUserNameToFirestore(res.user.uid, nombreUser,password,email); // Agregamos el nombre del usuario a Firestore
         this.router.navigate(['auth/login']);
       this.sendEmailForVerification(res.user);
 } else {
@@ -133,13 +133,14 @@ export class AuthservicesService {
     });
   }
 
-  private saveUserNameToFirestore(userId: string, nombreUser: string) {
+  private saveUserNameToFirestore(userId: string, nombreUser: string,constraseñaUser :string,emailUser:string) {
     const userCollection = collection(this.firestore, 'userhydropad'); // Utiliza 'collection' de firebase
   
     // Agrega los datos del usuario al documento
     addDoc(userCollection, { // Utiliza 'addDoc' de firebase
       userId: userId,
       nombre: nombreUser,
+      email: emailUser
     })
     .then(() => {
       console.log('Nombre de usuario guardado exitosamente en Firestore.');
@@ -154,7 +155,7 @@ export class AuthservicesService {
     user.sendEmailVerification().then((res : any) => {
       Swal.fire({
         title: '¡Verifique Su Email!',
-        text: 'La verificacion ha enviado sido enviada corractamente a su Email.',
+        text: 'La verificacion ha  sido enviada corractamente a su Email.',
         icon: 'success',
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'Aceptar'
@@ -204,9 +205,10 @@ export class AuthservicesService {
   
       const userId = res.user?.uid; // Obtener el UID del usuario de Google
       const userName = res.user?.displayName; // Obtener el nombre del usuario de Google (si está disponible)
-  
-      if (userId && userName) {
-        this.saveUserNameToFirestoreGOOGLE(userId, userName); // Guardar el nombre del usuario y el UID en Firestore
+      const emailUser = res.user?.email; // Obtener el nombre del usuario de Google (si está disponible)
+
+      if (userId && userName && emailUser) {
+        this.saveUserNameToFirestoreGOOGLE(userId, userName,emailUser); // Guardar el nombre del usuario y el UID en Firestore
       }
   
       localStorage.setItem('token', JSON.stringify(userId));
@@ -222,7 +224,7 @@ export class AuthservicesService {
     });
   }
   
-  private saveUserNameToFirestoreGOOGLE(userId: string, userName: string) {
+  private saveUserNameToFirestoreGOOGLE(userId: string, userName: string, emailUser:string) {
     const userCollection = collection(this.firestore, 'userhydropad');
   
     // Comprobar si el usuario ya existe en Firestore
@@ -234,6 +236,7 @@ export class AuthservicesService {
         addDoc(userCollection, {
           userId: userId,
           nombre: userName,
+          email:emailUser
         }).then(() => {
           console.log('Nombre de usuario guardado exitosamente en Firestore.');
         }).catch(error => {
@@ -252,27 +255,33 @@ export class AuthservicesService {
 
 
   //Forgot Password
-  forgotPassword(email:string)
-  {
-    this.fireauth.sendPasswordResetEmail(email).then(() => {
-      Swal.fire({
-        title: '¿Está seguro?',
-        text: "Ingrese la contraseña!",
-        icon: 'warning',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Entendido!'
-      })
-    }, err => {
-      Swal.fire({
-        title: 'Error de registro',
-        text: 'Algo salió mal ',
-        icon: 'error',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Entendido!'
-      });
-    }
-    );
+  forgotPassword(email: string) {
+    return this.fireauth.sendPasswordResetEmail(email);
   }
+
+
+
+  // forgotPassword(email:string)
+  // {
+  //   this.fireauth.sendPasswordResetEmail(email).then(() => {
+  //     Swal.fire({
+  //       title: '¿Está seguro?',
+  //       text: "Ingrese la contraseña!",
+  //       icon: 'warning',
+  //       confirmButtonColor: '#3085d6',
+  //       confirmButtonText: 'Entendido!'
+  //     })
+  //   }, err => {
+  //     Swal.fire({
+  //       title: 'Error de registro',
+  //       text: 'Algo salió mal ',
+  //       icon: 'error',
+  //       confirmButtonColor: '#3085d6',
+  //       confirmButtonText: 'Entendido!'
+  //     });
+  //   }
+  //   );
+  // }
 
   
 

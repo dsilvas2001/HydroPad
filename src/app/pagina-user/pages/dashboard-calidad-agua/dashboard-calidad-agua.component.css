@@ -1,0 +1,47 @@
+@keyframes floatAnimation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero__img {
+  animation: floatAnimation 4s ease-in-out infinite;
+  max-width: 100%;
+  width: 34rem;
+  height: auto;
+  float: right;
+  margin-left: 20px;
+}
+
+.hero__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero__texts {
+  flex: 1;
+  max-width: 50%; /* Establece un ancho máximo para el texto */
+}
+
+/* Estilos para la vista responsive */
+@media (max-width: 768px) {
+  .hero__img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%; /* Ocupa todo el ancho en vista móvil */
+    margin-bottom: 20px;
+  }
+  .hero__texts {
+    text-align: center; /* Alinea el texto al centro */
+    max-width: 80%; /* Establece un ancho máximo para el texto */
+    margin: 0 auto; /* Centra el texto horizontalmente */
+    flex-direction: row; /* Cambia la dirección de flexión a fila */
+    align-items: center; /* Alinea los elementos verticalmente */
+  }
+}
