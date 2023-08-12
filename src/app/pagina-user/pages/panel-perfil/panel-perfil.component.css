@@ -1,0 +1,245 @@
+.container {
+  display: flex;
+  width: 520px;
+  height: 500px;
+  max-width: 99%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff25;
+  border-radius: 15px;
+  border: 0.1px solid rgba(128, 128, 128, 0.178);
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1); /* Valores ajustados */
+}
+.left {
+  width: 66%;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  backdrop-filter: blur(20px);
+  position: relative;
+}
+.form::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 40%;
+  right: 1%;
+  z-index: -1;
+  background: radial-gradient(
+    circle,
+    rgb(194, 13, 170) 20%,
+    rgb(26, 186, 235) 60%,
+
+    rgb(26, 186, 235) 100%
+  );
+  filter: blur(70px);
+  border-radius: 50%;
+}
+
+.right {
+  width: 34%;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.container::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  right: -40%;
+  background: rgb(157, 173, 203);
+  background: radial-gradient(
+    circle,
+    rgba(157, 173, 203, 1) 61%,
+    rgba(99, 122, 159, 1) 100%
+  );
+  border-radius: 50%;
+  z-index: -1;
+}
+.input,
+button {
+  background: rgba(253, 253, 253, 0);
+  outline: none;
+  border: 1px solid rgba(255, 0, 0, 0);
+  border-radius: 0.5rem;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  display: block;
+  color: #425981;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.input-block {
+  position: relative;
+}
+.etiquetasUser {
+  position: absolute;
+  left: 13%;
+  top: 27%;
+  pointer-events: none;
+  color: rgb(131, 131, 131);
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: bolder;
+}
+.forgot {
+  display: block;
+  margin: 5px 0 10px 0;
+  margin-left: 60px; /* Ajusta este valor para moverlo a la derecha */
+  color: #5e7eb6;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.input:not(:placeholder-shown) + label,
+.input:valid + label {
+  transform: translateY(-120%) scale(0.9);
+  transition: all 0.4s;
+}
+
+button {
+  background-color: #5e7eb6;
+  color: white;
+  font-size: medium;
+  box-shadow: 2px 4px 8px rgba(70, 70, 70, 0.178);
+}
+
+a {
+  color: #5e7eb6;
+}
+
+.input {
+  box-shadow: inset 4px 4px 4px rgba(165, 163, 163, 0.315),
+    4px 4px 4px rgba(218, 218, 218, 0.13);
+}
+/* CHECKLIST */
+
+.cyberpunk-checkbox {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #30cfd0;
+  border-radius: 5px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+  z-index: 1; /* Asegura que el checkbox esté detrás de otros elementos */
+  pointer-events: none; /* Evita que el checkbox intercepte clics */
+}
+
+.cyberpunk-checkbox:before {
+  content: "";
+  background-color: #30cfd0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1; /* Asegura que el checkmark esté detrás del checkbox */
+}
+
+.cyberpunk-checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+  font-size: 28px;
+  color: #023e8a;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  margin-bottom: 10px; /* Espacio entre los bloques */
+}
+
+.centrarValidarEditar {
+  position: relative;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 10px; /* Espacio entre los bloques */
+  right: -11rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column; /* Cambia la dirección de flex para apilar los elementos */
+    height: auto; /* Ajusta la altura automáticamente en pantallas medianas */
+  }
+
+  .left {
+    width: 100%; /* Ancho completo para la parte izquierda */
+  }
+
+  .form {
+    width: 100%; /* Ancho completo para el formulario */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    background-color: transparent; /* Elimina el fondo degradado en pantallas pequeñas */
+    border: none; /* Elimina el borde en pantallas pequeñas */
+    box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+  }
+  .centrarValidarEditar {
+    text-align: center; /* Centra horizontalmente */
+    margin-bottom: 10px; /* Ajusta el espacio inferior */
+    margin-right: 12px; /* Ajusta el espacio entre el checkbox y el texto */
+    right: -1rem;
+  }
+
+  .cyberpunk-checkbox-label {
+    display: flex; /* Activa flexbox para centrar verticalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Ancho completo para ambas partes en pantallas pequeñas */
+    border-radius: 0; /* Quita el radio de borde en pantallas pequeñas */
+    box-shadow: none; /* Elimina la sombra en pantallas pequeñas */
+  }
+
+  .form::before,
+  .container::after {
+    display: none; /* Oculta los elementos decorativos en pantallas pequeñas */
+  }
+
+  .input,
+  button {
+    width: 100%; /* Ancho completo para los campos y botones en pantallas pequeñas */
+  }
+
+  .etiquetasUser {
+    left: 8%; /* Ajusta la posición del label en pantallas pequeñas */
+    top: 22%; /* Ajusta la posición del label en pantallas pequeñas */
+  }
+
+  .forgot {
+    margin-left: 0; /* Alinea el enlace al centro en pantallas pequeñas */
+  }
+}

@@ -1,9 +1,9 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
-import Swal from 'sweetalert2'
 // import { AuthLoginService } from '../../services/auth-login.service';
 import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { AuthservicesService } from '../../Services/authservices.service';
 
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -97,41 +97,6 @@ passwordRegister: string = '';
 
   ///RECORDAR CONTRASEÑA 
 
-  // RecordarPassword()
-  // {
-  //   Swal.fire({
-  //     title: 'Introduce tu Email para validar tu cuenta:',
-  //     input: 'text',
-  //     inputAttributes: {
-  //       autocapitalize: 'off'
-  //     },
-  //     showCancelButton: true,
-  //     confirmButtonText: 'Verificar',
-  //     showLoaderOnConfirm: true,
-  //     preConfirm: (login) => {
-  //       return fetch(`//api.github.com/users/${login}`)
-  //         .then(response => {
-  //           if (!response.ok) {
-  //             throw new Error(response.statusText)
-  //           }
-  //           return response.json()
-  //         })
-  //         .catch(error => {
-  //           Swal.showValidationMessage(
-  //             `Request failed: ${error}`
-  //           )
-  //         })
-  //     },
-  //     allowOutsideClick: () => !Swal.isLoading()
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       Swal.fire({
-  //         title: `${result.value.login}'s avatar`,
-  //         imageUrl: result.value.avatar_url
-  //       })
-  //     }
-  //   })
-  // }
 
   recordarPassword() {
     Swal.fire({

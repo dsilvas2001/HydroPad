@@ -190,6 +190,10 @@ span {
   letter-spacing: 0.5px;
   margin-bottom: 10px;
 }
+.tituloComentario,
+.descripcionTexto {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
 .social-links div {
   width: 40px;
