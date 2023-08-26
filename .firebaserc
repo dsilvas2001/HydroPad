@@ -12,6 +12,13 @@
           "https://hydropad-c1a22.web.app/pageprincipal/Home"
         ]
       }
+    },
+    "819632060551": {
+      "hosting": {
+        "hydropad": [
+          "hydropad-c1a22"
+        ]
+      }
     }
   },
   "etags": {}
