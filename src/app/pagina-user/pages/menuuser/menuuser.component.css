@@ -1,0 +1,12 @@
+.nav-profile-text {
+    word-break: break-all;
+    overflow: hidden;
+  }
+  
+  .nav-profile-text {
+    word-wrap: break-word;
+    overflow: hidden;
+    /* white-space: pre-line;
+    font-size: 11px; */
+  }
+  

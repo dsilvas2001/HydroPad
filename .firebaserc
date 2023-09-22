@@ -1,25 +1,16 @@
 {
+  "etags": {},
   "projects": {
-    "default": "hydropad-c1a22"
+    "default": "hydropad-c1a22",
+    "staging": "hydropad-c1a22"
   },
   "targets": {
     "hydropad-c1a22": {
-      "hosting": {
-        "HYDROPAD": [
-          "hydropad-c1a22"
-        ],
-        "hydropad": [
-          "https://hydropad-c1a22.web.app/pageprincipal/Home"
-        ]
-      }
-    },
-    "819632060551": {
       "hosting": {
         "hydropad": [
           "hydropad-c1a22"
         ]
       }
     }
-  },
-  "etags": {}
+  }
 }

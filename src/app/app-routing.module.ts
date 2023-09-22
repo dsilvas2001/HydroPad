@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { authGuard, publicGuard} from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path:'pageprincipal',
-    loadChildren: () => import('./pageprincipal/pageprincipal.module').then(m=>m.PageprincipalModule)
+    // canActivate : [authGuard],
+    loadChildren: () => import('./pageprincipal/pageprincipal.module').then(m=>m.PageprincipalModule),
   },
   {
     path:'auth',
+    canActivate : [publicGuard],
     loadChildren: () => import('./auth/auth.module').then(m=>m.AuthModule)
   },
   {
@@ -16,6 +19,7 @@ const routes: Routes = [
   },
   {
     path:'pagina-user',
+    canActivate : [authGuard],
     loadChildren: () => import('./pagina-user/pagina-user.module').then(m=>m.PaginaUserModule)
   },
   {

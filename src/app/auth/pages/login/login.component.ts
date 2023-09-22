@@ -1,33 +1,33 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, OnInit } from '@angular/core';
 // import { AuthLoginService } from '../../services/auth-login.service';
-import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
-import { AuthservicesService } from '../../Services/authservices.service';
+// import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 
 import Swal from 'sweetalert2'
+
+// Services
+import { AuthservicesService } from '../../Services/authservices.service';
+import { BackuserService } from 'src/app/BackupPgAdmin/ServicesBack/backuser.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css','./CSS/buttonGoogle.css','./CSS/buttonAceeder.css']
 })
 export class LoginComponent implements OnInit, AfterViewInit{
-  email: string = '';
-
+ email: string = '';
  password: string = '';
-
-
  nameUser: string = '';
  emailRegister: string = '';
+ passwordRegister: string = '';
 
-passwordRegister: string = '';
+
 
  constructor(private auth: AuthservicesService) { 
-
-
   }
 
   ngOnInit(): void {
-    // Coloca cualquier lógica de inicialización necesaria aquí
   }
+
   register()
   {
 
@@ -53,6 +53,7 @@ passwordRegister: string = '';
     }
 
     this.auth.register(this.nameUser,this.emailRegister, this.passwordRegister);
+
     this.nameUser = '';
     this.emailRegister = '';
     this.passwordRegister = '';
@@ -80,7 +81,7 @@ passwordRegister: string = '';
 
 
 
-  //GEOOGLE
+  //GOOGLE
   signInWithGeoogle()
   {
     this.auth.googleSignIn();
@@ -182,6 +183,8 @@ passwordRegister: string = '';
       confirmButtonText: 'Entendido!'
     });
   }
+
+
 
   // Codio JS
   ////////////////////////////////////////////////////////////////

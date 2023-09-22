@@ -1,17 +1,68 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AuthservicesService } from 'src/app/auth/Services/authservices.service';
+import { Usuario } from 'src/app/models/usermodels';
+import { UserfiretoolsService } from 'src/app/serverFirebaseTools/userfiretools.service';
 
 // declare var ApexCharts: any;
  // Declaración de la variable global ApexCharts
 declare var jQuery: any; // Declaración de la variable global jQuery
+
+
+import Swal from 'sweetalert2'
+import { UserefreshService } from '../../userservices/userefresh.service';
 
 @Component({
   selector: 'app-menuuser',
   templateUrl: './menuuser.component.html',
   styleUrls: ['./menuuser.component.css', '../CSS/submenu.css', '../CSS/menu.css', '../CSS/panel.css' , '../CSS/navbar.css', '../CSS/encabezado.css', '../CSS/cards.css', '../CSS/estructura.css',  '../CSS/responsive.css' ]
 })
-export class MenuuserComponent implements AfterViewInit {
+export class MenuuserComponent implements OnInit, AfterViewInit {
 
-  constructor(private elementRef: ElementRef) {}
+  nameUserHydropad: string = '';
+  usuario: Usuario
+
+  constructor(private elementRef: ElementRef,private auth: AuthservicesService,private userProfileService: UserfiretoolsService,private userService: UserefreshService) {
+    this.usuario = {
+      userId: '',
+      nombre: '',
+      email: ''
+    };
+  }
+
+
+
+  ngOnInit(): void {
+
+   }
+
+  
+
+
+  logoutUser(){
+
+    Swal.fire({
+      title: 'Deseas Cerrar Sesión?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.auth.logout();
+        this.userService.clearUserData();
+        Swal.fire(
+          'Correctamente!',
+          'Se ha cerrado sesión correctamente.',
+          'success'
+        )
+      }
+    })
+  } 
+
+
+  
+
 
   ngAfterViewInit(): void {
     // Código JavaScript adaptado

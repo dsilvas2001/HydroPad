@@ -1,26 +1,4 @@
 {
-  "hosting": [
-    {
-      "target": "hydropad",
-      "public": "dist/hydropad",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
-      "target": "HYDROPAD",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ],
   "emulators": {
     "auth": {
       "port": 9099
@@ -34,7 +12,21 @@
     "ui": {
       "enabled": true,
       "port": 9096
-    },
-    "singleProjectMode": true
+    }
+  },
+  "hosting": {
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "public": "dist/hydropad",
+    "rewrites": [
+      {
+        "destination": "/index.html",
+        "source": "**"
+      }
+    ],
+    "target": "hydropad"
   }
 }

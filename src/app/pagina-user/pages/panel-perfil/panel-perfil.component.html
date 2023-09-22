@@ -260,11 +260,12 @@
                               type="checkbox"
                               id="checkEditar"
                               class="cyberpunk-checkbox"
-                              [checked]="checkboxValue"
-                              (change)="toggleCheckbox()"
+                              [(ngModel)]="checkboxValue"
+                              (ngModelChange)="toggleCheckbox()"
                               name="checkboxValue"
                             />
-                            Deseas Editar?</label
+                            Habilitar Edición
+                            </label
                           >
                         </div>
                         <br />
@@ -288,7 +289,9 @@
                             class="input"
                             type="text"
                             id="email"
-                            [disabled]="!editarHabilitado"
+                            name="emailUserHydropad"
+                            [(ngModel)]="emailUserHydropad"
+                            disabled
                             required
                           />
                           <label class="etiquetasUser" for="email">Email</label>
@@ -305,7 +308,7 @@
                             ></span
                           >
                           <br />
-                          <button>Editar</button>
+                          <button (click)="editProfile()" style="cursor: pointer;">Editar</button>
                         </div>
                         <div class="input-block"></div>
                       </form>

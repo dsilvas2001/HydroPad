@@ -30,7 +30,7 @@ export class PageHomeComponent implements AfterViewInit{
   }
 
 
-  // Contactanos
+  // Contactamos
   public sendEmail(e: Event) {
     e.preventDefault();
   

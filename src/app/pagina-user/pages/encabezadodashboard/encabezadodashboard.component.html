@@ -48,7 +48,7 @@
               <span class="availability-status online"></span>
             </div>
             <div class="nav-profile-text">
-              <p class="mb-1 text-black">Donald Silva</p>
+              <p class="mb-1 text-black">{{usuario.nombre}}</p>
             </div>
 
             <i
@@ -61,7 +61,7 @@
             aria-labelledby="profileDropdown"
             id="ShowPerfil"
           >
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" (click)="refreshWebsites()">
               <i
                 class="fa-solid fa-rotate fa-spin mr-2"
                 style="color: #3dff4a"
@@ -69,7 +69,7 @@
               Cargar Datos
             </a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
+            <a class="dropdown-item" (click)="logoutUser()">
               <i class="mdi mdi-logout mr-2 text-primary"></i> Salir
             </a>
           </div>

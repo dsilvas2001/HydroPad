@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/pages/login/login.component';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
+import { HttpClientModule } from '@angular/common/http';
 
  // aquí se importa FormsModule
 
@@ -23,6 +24,7 @@ import { AngularFireModule } from '@angular/fire/compat';
     LoginComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -31,21 +33,6 @@ import { AngularFireModule } from '@angular/fire/compat';
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
-    
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-  //   provideAuth(() => 
-  //   {
-  //     const auth = getAuth();
-  //     connectAuthEmulator(auth,'http://localhost:9099',{disableWarnings: true}); 
-  //     return auth;
-  //   // initializeApp(environment.firebase)
-  // }
-  // ),
-  //   provideFirestore(() => {
-  //     const firestore = getFirestore();
-  //     connectFirestoreEmulator(firestore,'http://localhost',9098);
-  //     return firestore;
-  //   }),
   ],
   providers: [],
   bootstrap: [AppComponent]
